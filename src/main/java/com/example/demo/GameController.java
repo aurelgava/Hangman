@@ -36,8 +36,18 @@ public class GameController extends Kontroler{
     private ImageView kost8;
     private ImageView[] kosti;
     private int pokusaj;
+    @FXML
+    private ImageView plesKostura;
+    @FXML
+    private ImageView plesKostura1;
+    @FXML
+    private ImageView plesKostura2;
+    @FXML
+    private ImageView plesKostura3;
+    private int brojPogodjenihSlova;
 
     public void populate(){
+        brojPogodjenihSlova=0;
         pokusaj=0;
         this.kosti = new ImageView[8];
         kosti[0]=kost1;
@@ -68,6 +78,7 @@ public class GameController extends Kontroler{
     }
 
     public void slovoTyped(KeyEvent event) {
+        if(pokusaj>=kosti.length) return;
         boolean pogodio=false;
         System.out.println(event.getCharacter().toUpperCase());
         for(int i=0; i<this.trazenaRec.length();i++){
@@ -82,6 +93,13 @@ public class GameController extends Kontroler{
                 pogodjenoSlovo.setFill(Color.GOLD);
                 //pogodjenoSlovo.setStyle("-fx-text-inner-color: green; -fx-font-size: 40px;");
                 canvas.getChildren().add(pogodjenoSlovo);
+                brojPogodjenihSlova++;
+                if(brojPogodjenihSlova==this.trazenaRec.length()){
+                    plesKostura.setVisible(true);
+                    plesKostura1.setVisible(true);
+                    plesKostura2.setVisible(true);
+                    plesKostura3.setVisible(true);
+                }
             }
 
         }

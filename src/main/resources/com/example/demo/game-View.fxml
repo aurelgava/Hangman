@@ -65,5 +65,24 @@
          </image>
       </ImageView>
       <Pane fx:id="canvas" layoutX="12.0" layoutY="446.0" prefHeight="73.0" prefWidth="748.0" />
+      <ImageView fx:id="plesKostura" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/giphy.gif" />
+         </image></ImageView>
+      <ImageView fx:id="plesKostura1" fitHeight="150.0" fitWidth="200.0" layoutX="27.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/giphy.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plesKostura2" fitHeight="150.0" fitWidth="200.0" layoutX="591.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/giphy.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plesKostura3" fitHeight="150.0" fitWidth="200.0" layoutX="591.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/giphy.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
