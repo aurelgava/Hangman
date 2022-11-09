@@ -61,6 +61,10 @@ public class GameController extends Kontroler{
         for (ImageView k: kosti) {
             k.setVisible(false);
         }
+        plesKostura.setVisible(false);
+        plesKostura1.setVisible(false);
+        plesKostura2.setVisible(false);
+        plesKostura3.setVisible(false);
         this.trazenaRec = BazaProxy.nextRec();
         //System.out.println(this.trazenaRec);
         canvas.getChildren().clear();

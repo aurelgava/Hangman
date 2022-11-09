@@ -9,7 +9,7 @@ public class BazaProxy {
     public static void konektujSe(){
         if (c==null){
             try {
-                c = DriverManager.getConnection("jdbc:ucanaccess://src/main/resources/Baza/Hangman.accdb");
+                c = DriverManager.getConnection("jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7556372","sql7556372","aUnmv8sUWc");  ;
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
