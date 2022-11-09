@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.GameController">
+<AnchorPane onKeyTyped="#slovoTyped" prefHeight="543.0" prefWidth="723.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.GameController">
    <children>
-      <ImageView fitHeight="290.0" fitWidth="373.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="565.0" fitWidth="783.0" layoutX="-11.0" layoutY="-9.0">
          <image>
-            <Image url="@../../../../../../../../Downloads/form2.png" />
+            <Image url="@../../../slike/pozadinaIgra.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="456.0" layoutY="41.0" mnemonicParsing="false" onAction="#klikNewGame" text="New Game" />
+      <Label fx:id="imeIgraca" alignment="CENTER" layoutX="601.0" layoutY="14.0" prefHeight="40.0" prefWidth="108.0" textFill="WHITE">
+         <font>
+            <Font name="Gabriola" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="616.0" layoutY="21.0" mnemonicParsing="false" onAction="#mmKlik" style="-fx-background-radius: 20;" text="Main menu">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font></Button>
+      <ImageView fx:id="kost1" fitHeight="73.0" fitWidth="63.0" layoutX="340.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/lobanja.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost2" fitHeight="150.0" fitWidth="200.0" layoutX="315.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/rebra.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost3" fitHeight="150.0" fitWidth="200.0" layoutX="379.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/levaRuka.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost4" fitHeight="150.0" fitWidth="200.0" layoutX="278.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/desnaRuka.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost5" fitHeight="100.0" fitWidth="77.0" layoutX="318.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/butkaDesna.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost6" fitHeight="90.0" fitWidth="77.0" layoutX="360.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/butkaLeva.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost7" fitHeight="132.0" fitWidth="52.0" layoutX="318.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/desnaNoga.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kost8" fitHeight="100.0" fitWidth="77.0" layoutX="368.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../../../slike/levaNoga.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="canvas" layoutX="12.0" layoutY="446.0" prefHeight="73.0" prefWidth="748.0" />
    </children>
 </AnchorPane>

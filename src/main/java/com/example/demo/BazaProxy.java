@@ -1,11 +1,12 @@
 package com.example.demo;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class BazaProxy {
     private static Connection c;
     public static ArrayList<String> reci;
-    public static void konektuj(){
+    public static void konektujSe(){
         if (c==null){
             try {
                 c = DriverManager.getConnection("jdbc:ucanaccess://src/main/resources/Baza/Hangman.accdb");
@@ -16,17 +17,23 @@ public class BazaProxy {
     }
     public static void procitajReci(){
         reci = new ArrayList<>();
-        Statement s = null;
+        if (c==null) konektujSe();
         try {
-            s = c.createStatement();
+            Statement s = c.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM Reci");
             while(rs.next()){
                 reci.add(rs.getString("Field1"));
-                System.out.println(rs.getString("Field1"));
+                //System.out.println(rs.getString("Field1"));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public static String nextRec() {
+        if (reci==null) procitajReci();
+        Random r = new Random();
+        return reci.get(r.nextInt(reci.size()));
     }
 }

@@ -1,14 +1,17 @@
 package com.example.demo;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
-public class MainMenuController {
-    @FXML
-    private Label welcomeText;
+public class MainMenuController extends Kontroler {
 
-    @FXML
-    protected void onHelloButtonClick() {
-        HangmanApplication.stage.setScene(HangmanApplication.scenes[1]);
+    public void nGameKlik(ActionEvent actionEvent) {
+        HangmanApplication.postaviScenu(HangmanApplication.SCENE_GAME);
+    }
+
+    @Override
+    public void populate() {
+
     }
 }
